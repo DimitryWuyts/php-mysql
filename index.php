@@ -6,3 +6,7 @@ error_reporting(E_ALL);
 
 include 'connection.php';
 
+$connection = openConnection();
+if ($connection) {
+    echo 'connection';
+}
