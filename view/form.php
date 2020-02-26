@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <h1>Form to test MySQL</h1>
-
+    <legend>Information</legend>
     <form method="post">
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -25,7 +25,6 @@
         </div>
 
         <fieldset>
-            <legend>Information</legend>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -56,18 +55,14 @@
                     <label>Email</label>
                     <input type="text"  name="email" class="form-control">
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>Preferred language</label>
-                    <input type="text" name="preferred_language" class="form-control">
-                </div>
                 <div class="form-group col-md-6">
                     <label>Avatar</label>
                     <input type="text" name="avatar" class="form-control">
                 </div>
-            </div>
-            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label> Created at: </label>
+                    <input type="text" name="created_at" class="form-control">
+                </div>
                 <div class="form-group col-md-6">
                     <label>Video</label>
                     <input type="text" name="video" class="form-control">
@@ -82,14 +77,17 @@
                     <label>Quote Author</label>
                     <input type="text" name="quote_author" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
-                    <label> Created at: </label>
-                    <input type="text" name="created_at" class="form-control">
-                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </fieldset>
-
+        <hr> <label for="preferred_language"> Choose language here</label>
+        <select name="preferred_language">
+            <option value="be">nl</option>
+            <option value="de">de</option>
+            <option value="en">en</option>
+            <option value="fr">fr</option>
+            <option value="ru">ru</option>
+        </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
 
 </div>
 
