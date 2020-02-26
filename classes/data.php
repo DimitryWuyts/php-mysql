@@ -14,19 +14,18 @@ class getData extends connection
             echo '<hr>';
             echo $row['firstName'] . '<br>';
             echo $row['userName'] . '<br>';
-            echo $row['email'] . '<br>';
             echo $row['preferred_language'] . '<br>';
-            echo $row['github'] . '<br>';
+            echo $row['email'] . '<br>';
 
         }
     }
 
 
-    public function getUserStmt($firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor)
+    public function getUserStmt($firstName, $lastName, $userName, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor)
     {
-        $sql = "SELECT * FROM student_table WHERE first_name = ? AND last_name =? AND username =? AND linkedin =? AND github=? AND email =? AND preferred_language =? AND avatar =? AND  video =? AND quote = ? AND quote_author =?";
+        $sql = "SELECT * FROM student_table WHERE firstName = ? AND lastName =? AND userName =? AND linkedin =? AND github=? AND email =? AND preferred_language =? AND avatar =? AND  video =? AND quote = ? AND quote_author =?";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
+        $stmt->execute([$firstName, $lastName, $userName, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
         $names = $stmt->fetchAll();
 
         foreach ($names as $name) {
@@ -37,11 +36,11 @@ class getData extends connection
     }
 
 
-    public function setUserStmt($firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor)
+    public function setUserStmt($firstName, $lastName, $userName, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor)
     {
         $sql = "INSERT INTO student_table(firstName,lastName,userName,linkedin, github, email, preferred_language, avatar,video, quote ,quote_author)VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
+        $stmt->execute([$firstName, $lastName, $userName, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
 
     }
 }
