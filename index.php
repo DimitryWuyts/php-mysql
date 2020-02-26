@@ -10,3 +10,4 @@ require 'controllers/homepageController.php';
 
 $controller = new Controller();
 $controller->render();
+

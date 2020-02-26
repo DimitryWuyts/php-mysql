@@ -12,9 +12,10 @@ class getData extends connection
         //fetch data
         while ($row = $stmt->fetch()) {
             echo '<hr>';
-            echo $row['id'] . '<br>';
             echo $row['firstName'] . '<br>';
             echo $row['userName'] . '<br>';
+            echo $row['email'] . '<br>';
+            echo $row['preferred_language'] . '<br>';
             echo $row['github'] . '<br>';
 
         }
