@@ -13,8 +13,8 @@ class getData extends connection
         while ($row = $stmt->fetch()) {
             echo '<hr>';
             echo $row['id'] . '<br>';
-            echo $row['first_name'] . '<br>';
-            echo $row['username'] . '<br>';
+            echo $row['firstName'] . '<br>';
+            echo $row['userName'] . '<br>';
             echo $row['github'] . '<br>';
 
         }
@@ -38,7 +38,7 @@ class getData extends connection
 
     public function setUserStmt($firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor)
     {
-        $sql = "INSERT INTO student_table(first_name,last_name,username,linkedin, github, email, preferred_language, avatar,video, quote ,quote_author)VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO student_table(firstName,lastName,userName,linkedin, github, email, preferred_language, avatar,video, quote ,quote_author)VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$firstName, $lastName, $username, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
 
