@@ -8,7 +8,12 @@ require 'classes/connection.php';
 require 'classes/data.php';
 require 'controllers/homepageController.php';
 require 'controllers/query.php';
+require 'controllers/profileController.php';
 
-$controller = new Controller();
-$controller->render();
-
+if (!isset($_GET['user'])) {
+    $controller = new Controller();
+    $controller->render();
+} else {
+    $profileController = new profileController();
+    $profileController->render();
+}
