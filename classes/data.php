@@ -43,4 +43,8 @@ class getData extends connection
         $stmt->execute([$firstName, $lastName, $userName, $linkedin, $github, $email, $preferredLanguage, $avatar, $video, $quote, $quoteAuthor]);
 
     }
+
+    function getInfoPrepared()
+    {
+    }
 }

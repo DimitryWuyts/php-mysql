@@ -90,11 +90,36 @@
             <button type="submit" class="btn btn-primary">Submit</button>
 
 </div>
+<br><br>
+<table border="1">
+    <?php
+    $newConnection = new Connection();
+    $newConnection = $newConnection->Connect();
+    $query = new Query();
+    $query->createUserArray();
+    foreach (($query->getUserArray()) as $user):
+        ?>
+        <tr>
+            <td>
+                <?php echo $user['firstName'] ?>
+            </td>
 
-<style>
-    footer {
-        text-align: center;
-    }
-</style>
-</body>
-</html>
+
+            <td>
+                <?php echo $user['lastName'] ?>
+            </td>
+
+
+            <td>
+                <?php echo $user['email'] ?>
+            </td>
+
+            <td>
+                <img src="<?php echo 'images/' . $user['preferred_language'] . '.png' ?>" alt="flag">
+            </td>
+
+            <td><a href="?user=<?php echo $user['id'] ?>">Profile</a></td>
+
+        </tr>
+    <?php endforeach; ?>
+</table>

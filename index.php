@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 require 'classes/connection.php';
 require 'classes/data.php';
 require 'controllers/homepageController.php';
+require 'controllers/query.php';
 
 $controller = new Controller();
 $controller->render();
