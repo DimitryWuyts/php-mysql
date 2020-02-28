@@ -12,8 +12,22 @@
     <title>MySQL</title>
 </head>
 <body>
+
+<form action="" method="post">
+    <h1>Login</h1>
+    <section>
+        <label for="email">Email here</label>
+        <input id="email" name="email" >
+    </section>
+    <section>
+        <label for="password">Password here</label>
+        <input id="password" name="password" >
+    </section>
+    <input type="submit" value="register" id="register" name="register">
+    <input type="submit"  value= "login" name="login">
+</form>
+<br><br>
 <div class="container">
-    <h1>Form to test MySQL</h1>
     <legend>Information</legend>
     <form method="post">
         <div class="form-row">

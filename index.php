@@ -9,6 +9,7 @@ require 'classes/data.php';
 require 'controllers/homepageController.php';
 require 'controllers/query.php';
 require 'controllers/profileController.php';
+require 'controllers/loginController.php';
 
 if (!isset($_GET['user'])) {
     $controller = new Controller();

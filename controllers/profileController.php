@@ -3,7 +3,6 @@
 class profileController
 {
 
-
     public function render()
     {
         $newConnection = new Connection();
